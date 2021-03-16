@@ -4,7 +4,7 @@ kind: K8sPSPPrivilegedContainer
 metadata:
   name: privileged-container
 spec:
-#  enforcementAction: dryrun
+  enforcementAction: dryrun
   match:
     kinds:
       - apiGroups: [""]

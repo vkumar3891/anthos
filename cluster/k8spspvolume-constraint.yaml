@@ -3,7 +3,7 @@ kind: K8sPSPVolumeTypes
 metadata:
   name: psp-volume-types
 spec:
-#  enforcementAction: dryrun
+  enforcementAction: dryrun
   match:
     kinds:
       - apiGroups: [""]
