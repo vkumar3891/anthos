@@ -16,7 +16,6 @@ spec:
       - kind: ServiceAccount
         name: default
         namespace: default
-        apiGroup: ""
     restrictedRole: 
       - apiGroup: rbac.authorization.k8s.io
         kind: ClusterRole
