@@ -16,8 +16,8 @@ spec:
       - kind: ServiceAccount
         name: default
         namespace: default
-    restrictedRole: 
+#    restrictedRole: 
 #      - apiGroup: rbac.authorization.k8s.io
 #      - kind: ClusterRole
-       - name: gatekeeper-manager-role
+#       - name: gatekeeper-manager-role
 
