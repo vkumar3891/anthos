@@ -1,7 +1,7 @@
 apiVersion: constraints.gatekeeper.sh/v1beta1
 kind: K8sRestrictRoleBindings
 metadata:
-  name: k8s-restrictRoleBindings 
+  name: restrictRoleBindings 
 spec:
   enforcementAction: dryrun
   match:
