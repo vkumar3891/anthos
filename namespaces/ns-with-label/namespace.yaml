@@ -1,7 +1,0 @@
-# create namespace named "test"
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: ns-with-label
-  labels:
-   "Label-name-required": "mylabel"
