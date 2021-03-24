@@ -15,11 +15,11 @@ spec:
     allowedSubjects: 
       - kind: ServiceAccount
         name: default
-        namespace: default
+        namespace: kube-system
     restrictedRole:
-        kind: ClusterRole
-        name: kube-system
         apiGroup: rbac.authorization.k8s.io
-         
+        kinds: ["RoleBinding","ClusterRoleBinding"] 
+        name: ""
+        
 #       - name: gatekeeper-manager-role
 
