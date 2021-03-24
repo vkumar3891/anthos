@@ -1,0 +1,25 @@
+apiVersion: constraints.gatekeeper.sh/v1beta1
+kind: K8sRestrictRoleBindings
+metadata:
+  name: restrictrolebindings 
+spec:
+#  enforcementAction: dryrun
+  match:
+    kinds:
+      - apiGroups: [""]
+        kinds: ["ServiceAccount"]
+    namespaceselector:
+      matchExpressions:
+      - { key: pod_security, operator: notIn, values: [exempt] }
+  parameters:
+    allowedSubjects: 
+      - kind: ServiceAccount
+        name: default
+        namespace: default
+    restrictedRole:
+        kind: ClusterRole
+        name: vasanth.kalali-cluster-admin-binding 
+        apiGroup: rbac.authorization.k8s.io
+         
+#       - name: gatekeeper-manager-role
+
