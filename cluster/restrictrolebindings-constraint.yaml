@@ -17,7 +17,7 @@ spec:
         name: default
         namespace: default
     restrictedRole:
-        kind: ClusterRole
+        kind: ClusterRole/cluster-admin
         name: vasanth.kalali-cluster-admin-binding 
         apiGroup: rbac.authorization.k8s.io
          
