@@ -14,8 +14,8 @@ spec:
   parameters:
     allowedSubjects: 
       - kind: ServiceAccount
-        name: default
-        namespace: kube-system
+        name: ""
+        namespace: default
     restrictedRole:
         apiGroup: rbac.authorization.k8s.io
         kinds: ["RoleBinding","ClusterRoleBinding"] 
