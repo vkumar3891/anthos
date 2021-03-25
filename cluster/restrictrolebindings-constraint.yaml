@@ -1,34 +1,17 @@
 apiVersion: constraints.gatekeeper.sh/v1beta1
 kind: K8sRestrictRoleBindings
 metadata:
-  name: restrictrolebindings 
+  name: restrictrolebindings
 spec:
-#  enforcementAction: dryrun
   match:
     kind:
       - apiGroups: [""]
         kind: "ClusterRoleBinding"
-    namespaceselector:
-      matchExpressions:
-      - { key: pod_security, operator: notIn, values: [exempt] }
   parameters:
-    allowedSubjects: 
+    allowedSubjects:
       - name: "view"
         kind: "ClusterRole"
     restrictedRole:
         apiGroup: "rbac.authorization.k8s.io"
-        kind: "ClusterRole"
         name: "cluster-admin"
-
-#    allowedSubjects:
-#      - kind: "ClusterRole"
-#        name: "view"
-#        namespace: default
-#    restrictedRole:
-#        apiGroup: "rbac.authorization.k8s.io"
-#        kinds: ["RoleBinding","ClusterRoleBinding"]
-#        kind: "ClusterRole"
-#        name: ""
-
-#       - name: gatekeeper-manager-role
-
+        kind: "ClusterRole"
