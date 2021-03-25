@@ -10,7 +10,7 @@ spec:
   parameters:
     allowedSubjects:
       - apiGroup: "rbac.authorization.k8s.io"
-        name: "vasanth"
+        name: "vasanthkumar.kalali.ctr@sabre.com"
         kind: "User"
     restrictedRole:
         apiGroup: "rbac.authorization.k8s.io"
