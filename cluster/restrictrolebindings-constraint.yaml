@@ -5,21 +5,30 @@ metadata:
 spec:
 #  enforcementAction: dryrun
   match:
-    kinds:
+    kind:
       - apiGroups: [""]
-        kinds: ["ServiceAccount"]
+        kind: ["ServiceAccount"]
     namespaceselector:
       matchExpressions:
       - { key: pod_security, operator: notIn, values: [exempt] }
   parameters:
     allowedSubjects: 
-      - kind: ServiceAccount
-        name: ""
-        namespace: default
+      - name: "view"
+        kind: "ClusterRole"
     restrictedRole:
-        apiGroup: rbac.authorization.k8s.io
-        kinds: ["RoleBinding","ClusterRoleBinding"] 
-        name: ""
-        
+        apiGroup: "rbac.authorization.k8s.io"
+        kind: "ClusterRole"
+        name: "cluster-admin"
+
+#    allowedSubjects:
+#      - kind: "ClusterRole"
+#        name: "view"
+#        namespace: default
+#    restrictedRole:
+#        apiGroup: "rbac.authorization.k8s.io"
+#        kinds: ["RoleBinding","ClusterRoleBinding"]
+#        kind: "ClusterRole"
+#        name: ""
+
 #       - name: gatekeeper-manager-role
 
