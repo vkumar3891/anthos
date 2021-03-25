@@ -15,4 +15,5 @@ spec:
     restrictedRole:
         apiGroup: "rbac.authorization.k8s.io"
         name: "cluster-admin"
-        kind: "ClusterRole"
+#        kind: "ClusterRole"
+        kinds: [ "RoleBinding", "ClusterRoleBinding" ]
