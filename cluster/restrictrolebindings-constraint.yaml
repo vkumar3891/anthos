@@ -3,7 +3,6 @@ kind: K8sRestrictRoleBindings
 metadata:
   name: restrict-clusteradmin-rolebindings
   annotations:
-    # This constraint is not certified by CIS.
     description: "Restricts use of the cluster-admin role."
 spec:
 #  enforcementAction: dryrun
@@ -18,5 +17,5 @@ spec:
       name: "cluster-admin"
     allowedSubjects:
     - apiGroup: "rbac.authorization.k8s.io"
-      kind: "Group"
-      name: "system:masters"
+      kind: "ServiceAccount"
+      name: "*"
