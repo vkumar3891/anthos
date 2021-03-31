@@ -5,7 +5,7 @@ metadata:
   annotations:
     description: "Restricts use of the cluster-admin role."
 spec:
-  enforcementAction: dryrun
+#  enforcementAction: dryrun
   match:
     kind:
       - apiGroups: [""]
