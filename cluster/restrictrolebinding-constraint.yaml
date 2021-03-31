@@ -11,10 +11,10 @@ spec:
       - apiGroups: [""]
         kind: "ClusterRoleBinding"
   parameters:
-#    restrictedRole:
-#      apiGroup: "rbac.authorization.k8s.io"
-#      kind: "ClusterRole"
-#      name: "cluster-admin"
+    restrictedRole:
+      apiGroup: "rbac.authorization.k8s.io"
+      kind: "ClusterRole"
+      name: "*"
     allowedSubjects:
     - apiGroup: "rbac.authorization.k8s.io"
       kind: "Group"
