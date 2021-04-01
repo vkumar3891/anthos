@@ -8,14 +8,18 @@ spec:
 #  enforcementAction: dryrun
   match:
     kind:
-      - apiGroups: [""]
-        kind: "ClusterRoleBinding"
+      - apiGroups: ["*"]
+        kind: ["ServiceAccount"]
   parameters:
     restrictedRole:
       apiGroup: "rbac.authorization.k8s.io"
-      kind: "ClusterRole"
+      kind: "ClusterRoleBinding"
       name: "*"
     allowedSubjects:
-    - apiGroup: "rbac.authorization.k8s.io"
-      kind: "Group"
-      name: "system:serviceaccounts"
+#    - apiGroup: "rbac.authorization.k8s.io"
+#      kind: "Group"
+#      name: "system:serviceaccounts"
+     - kind: ServiceAccount
+       name: default
+       namespace: default
+
