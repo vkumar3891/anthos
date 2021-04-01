@@ -19,7 +19,7 @@ spec:
 #    - apiGroup: "rbac.authorization.k8s.io"
 #      kind: "Group"
 #      name: "system:serviceaccounts"
-     - kind: ServiceAccount
-       name: "*"
+     - kind: Group
+       name: "system:serviceaccount"
        namespace: "*"
-
+"
