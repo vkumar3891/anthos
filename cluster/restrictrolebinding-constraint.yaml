@@ -20,6 +20,6 @@ spec:
 #      kind: "Group"
 #      name: "system:serviceaccounts"
      - kind: ServiceAccount
-       name: default
-       namespace: default
+       name: "*"
+       namespace: "*"
 
