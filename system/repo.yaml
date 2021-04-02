@@ -3,4 +3,4 @@ kind: Repo
 metadata:
   name: anthos
 spec:
-  version: test-branch-2
+  version: "1.0.0"
