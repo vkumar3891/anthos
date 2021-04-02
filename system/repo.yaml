@@ -3,4 +3,4 @@ kind: Repo
 metadata:
   name: repo
 spec:
-  version: "0.1.0"
+  version: "test-branch-2"
