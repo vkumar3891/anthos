@@ -7,7 +7,7 @@ spec:
   match:
     kinds:
       - apiGroups: [""]
-        kinds: ["ServiceAccount"]
+        kind: ["ServiceAccount"]
     namespaceselector:
       matchExpressions:
       - { key: pod_security, operator: notIn, values: [exempt] }
