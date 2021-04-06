@@ -6,13 +6,13 @@ spec:
 #  enforcementAction: dryrun
   match:
     kinds:
-      - apiGroups: 
+      - apiGroups: [""] 
         kind: "ServiceAccount"
   parameters:
     restrictedRole:
       apiGroup: "rbac.authorization.k8s.io"
       kind: "ClusterRole"
-      name: "cluster-admin"
+      name: "vasanth-cluster-admin"
     allowedSubjects:
     - apiGroup: "rbac.authorization.k8s.io"
       kind: "Group"
