@@ -3,11 +3,11 @@ kind: K8sRestrictRoleBindings
 metadata:
   name: restrictrolebindings 
 spec:
-  enforcementAction: dryrun
+#  enforcementAction: dryrun
   match:
     kinds:
       - apiGroups: [""]
-        kind: ["ServiceAccount"]
+        kind: "ClusterRoleBinding"
     namespaceselector:
       matchExpressions:
       - { key: pod_security, operator: notIn, values: [exempt] }
