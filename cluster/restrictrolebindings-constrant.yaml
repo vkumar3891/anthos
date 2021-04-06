@@ -5,18 +5,20 @@ metadata:
   annotations:
     description: "Restricts use of the cluster-admin role."
 spec:
-  enforcementAction: dryrun
+#  enforcementAction: dryrun
   match:
     kind:
-      - apiGroups: [""]
-        kind: "ClusterRoleBinding"
+      - apiGroups: ["*"]
+        kind: ["ServiceAccount"]
   parameters:
     restrictedRole:
       apiGroup: "rbac.authorization.k8s.io"
-      kind: "ClusterRole"
-      name: "cluster-admin"
-    allowedSubjects:
-    - apiGroup: "rbac.authorization.k8s.io"
-      kind: "ServiceAccount"
+      kind: "ClusterRoleBinding"
       name: "*"
-
+    allowedSubjects:
+#    - apiGroup: "rbac.authorization.k8s.io"
+#      kind: "Group"
+#      name: "system:serviceaccounts"
+     - kind: Group
+       name: "system:serviceaccount"
+       apiGroup: "rbac.authorization.k8s.io"
