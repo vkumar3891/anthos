@@ -16,9 +16,6 @@ spec:
       kind: "ClusterRoleBinding"
       name: "*"
     allowedSubjects:
-#    - apiGroup: "rbac.authorization.k8s.io"
-#      kind: "Group"
-#      name: "system:serviceaccounts"
      - kind: Group
-       name: "system:serviceaccount"
+       name: "system:masters"
        apiGroup: "rbac.authorization.k8s.io"
