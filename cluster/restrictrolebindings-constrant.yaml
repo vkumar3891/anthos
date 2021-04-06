@@ -11,11 +11,12 @@ spec:
       - apiGroups: ["*"]
         kind: ["ServiceAccount"]
   parameters:
-    restrictedRole:
-      apiGroup: "rbac.authorization.k8s.io"
-      kind: "ClusterRoleBinding"
-      name: "*"
+#    restrictedRole:
+#      apiGroup: "rbac.authorization.k8s.io"
+#      kind: "ClusterRole"
+#      name: "*"
     allowedSubjects:
-     - kind: Group
-       name: "system:masters"
+     - kind: ServiceAccount
+       name: default
+       namespace: default
        apiGroup: "rbac.authorization.k8s.io"
