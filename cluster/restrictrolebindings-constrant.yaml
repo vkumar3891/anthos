@@ -20,7 +20,8 @@ spec:
 #      name: "system:masters"
      - apiGroup: rbac.authorization.k8s.io
        kind: ServiceAccount
-       name: "system:*"
+       name: "*"
+       namespace: "*"
 #     - kind: Group
 #       apiGroup: rbac.authorization.k8s.io
 #       name: system:serviceaccounts
@@ -33,10 +34,10 @@ spec:
       apiGroup: "rbac.authorization.k8s.io"
       kind: "ClusterRole"
       name: "cluster-admin"
-    allowedSubjects:
-    - apiGroup: "rbac.authorization.k8s.io"
-      kind: "Group"
-      name: "system:masters"
+#    allowedSubjects:
+#    - apiGroup: "rbac.authorization.k8s.io"
+#      kind: "Group"
+#      name: "system:masters"
 
 
 
