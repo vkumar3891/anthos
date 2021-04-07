@@ -7,7 +7,7 @@ spec:
   match:
     kind:
       - apiGroups: ["*"] 
-        kind: ["ServiceAccount", "ClusterRoleBinding"]
+        kind: ["ClusterRoleBinding"]
   parameters:
 #    restrictedRole:
 #      apiGroup: rbac.authorization.k8s.io
