@@ -6,7 +6,7 @@ spec:
 #  enforcementAction: dryrun
   match:
     kind:
-      - apiGroups: [""] 
+      - apiGroups: ["*"] 
         kind: ["ServiceAccount", "ClusterRoleBinding"]
   parameters:
 #    restrictedRole:
