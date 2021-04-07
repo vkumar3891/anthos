@@ -5,7 +5,7 @@ metadata:
 spec:
 #  enforcementAction: dryrun
   match:
-    kinds:
+    kind:
       - apiGroups: [""] 
         kinds: ["ServiceAccount"]
   parameters:
