@@ -9,30 +9,34 @@ spec:
       - apiGroups: [""] 
         kinds: ["ServiceAccount"]
   parameters:
-    restrictedRole:
-      apiGroup: rbac.authorization.k8s.io
-      kind: ClusterRole
-      name: "*"
-    allowedSubjects:
+#    restrictedRole:
+#      apiGroup: rbac.authorization.k8s.io
+#      kind: ClusterRole
+#      name: "*"
 
-#    - apiGroup: "rbac.authorization.k8s.io"
+    allowedSubjects:
+#     - apiGroup: "rbac.authorization.k8s.io"
 #      kind: "Group"
 #      name: "system:masters"
-
      - apiGroup: rbac.authorization.k8s.io
        kind: ServiceAccount
        name: "system:*"
-
 #     - kind: Group
 #       apiGroup: rbac.authorization.k8s.io
 #       name: system:serviceaccounts
-
 #can create user but not restrcited with other user
 #     - apiGroup: "rbac.authorization.k8s.io"
 #       kind: User
 #       name: vasanth 
 
-
+    restrictedRole:
+      apiGroup: "rbac.authorization.k8s.io"
+      kind: "ClusterRole"
+      name: "cluster-admin"
+    allowedSubjects:
+    - apiGroup: "rbac.authorization.k8s.io"
+      kind: "Group"
+      name: "system:masters"
 
 
 
