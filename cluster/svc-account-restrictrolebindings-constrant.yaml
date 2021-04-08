@@ -1,0 +1,20 @@
+---
+apiVersion: constraints.gatekeeper.sh/v1beta1
+kind: K8sRestrictRoleBindings
+metadata:
+  name: restrictrolebindings
+spec:
+  match:
+    kind:
+      - apiGroups: [""]
+        kind: "ClusterRoleBinding"
+  parameters:
+    allowedSubjects:
+      - apiGroup: "rbac.authorization.k8s.io"
+        kind: "ServiceAccount"
+        name: "*"
+        namespace: "*"
+    restrictedRole:
+      apiGroup: "rbac.authorization.k8s.io"
+      kind: "ClusterRoleBinding"
+      name: "*"
