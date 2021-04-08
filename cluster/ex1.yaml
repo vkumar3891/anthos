@@ -1,0 +1,19 @@
+apiVersion: constraints.gatekeeper.sh/v1beta1
+kind: K8sRestrictRoleBindings
+metadata:
+  name: ex1
+spec:
+  #  enforcementAction: dryrun # {"$kpt-set":"enforcementAction"}
+  match:
+    kind:
+      - apiGroups: [""]
+        kind: "ClusterRoleBinding"
+  parameters:
+    restrictedRole:
+      apiGroup: "rbac.authorization.k8s.io"
+      kind: "ClusterRole"
+      name: "cluster-admin"
+    allowedSubjects:
+      - apiGroup: "rbac.authorization.k8s.io"
+        kind: "User"
+        name: "vasanthkumar.kalali.ctr@sabre.com"
