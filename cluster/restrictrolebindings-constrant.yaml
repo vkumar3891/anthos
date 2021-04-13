@@ -16,6 +16,6 @@ spec:
     restrictedRole:
       apiGroup: "rbac.authorization.k8s.io"
       kind: "ClusterRole"
-      name: "*"
+      name: ""
 #      namespace: ""
 #      name: "cluster-admin"
