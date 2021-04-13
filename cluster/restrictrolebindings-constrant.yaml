@@ -7,7 +7,7 @@ spec:
   match:
     kinds:
       - apiGroups: [""]
-        kinds: "ClusterRoleBinding"
+        kinds: ["ClusterRoleBinding"]
   parameters:
     allowedSubjects:
       - apiGroup: "rbac.authorization.k8s.io"
@@ -16,6 +16,6 @@ spec:
     restrictedRole:
       apiGroup: "rbac.authorization.k8s.io"
       kind: "ClusterRole"
-      name: "cluster"
+      name: "cluster-admin"
       namespace: ""
 #      name: "cluster-admin"
