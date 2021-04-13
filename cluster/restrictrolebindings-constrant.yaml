@@ -12,7 +12,7 @@ spec:
     allowedSubjects:
       - apiGroup: "rbac.authorization.k8s.io"
         kind: "User"
-        name: "vasanthkumar.kalali.ctr@sabre.com"
+        name: "*"
     restrictedRole:
       apiGroup: "rbac.authorization.k8s.io"
       kind: "ClusterRole"
