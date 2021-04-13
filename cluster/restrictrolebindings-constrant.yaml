@@ -17,5 +17,5 @@ spec:
       apiGroup: "rbac.authorization.k8s.io"
       kind: "ClusterRole"
       name: "*"
-      namespace: "*"
+      namespace: ""
 #      name: "cluster-admin"
