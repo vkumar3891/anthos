@@ -4,6 +4,7 @@ kind: K8sRestrictRoleBindings
 metadata:
   name: svc-account-restrictrolebindings
 spec:
+#  enforcementAction: dryrun
   match:
     kind:
       - apiGroups: [""]
@@ -12,9 +13,9 @@ spec:
     allowedSubjects:
       - apiGroup: "rbac.authorization.k8s.io"
         kind: "ServiceAccount"
-        name: "*"
-        namespace: "*"
+        name: "vasanth-test"
+        namespace: "default"
     restrictedRole:
       apiGroup: "rbac.authorization.k8s.io"
       kind: "ClusterRoleBinding"
-      name: "*"
+      name: "cluster-admin"
