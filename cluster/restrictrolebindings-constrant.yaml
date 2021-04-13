@@ -10,13 +10,15 @@ spec:
         kind: "ClusterRoleBinding"
   parameters:
     allowedSubjects:
+#      - apiGroup: "rbac.authorization.k8s.io"
+#        kind: "ServiceAccount"
+#        name: "vasanth-test"
+#        namespace: "default"
       - apiGroup: "rbac.authorization.k8s.io"
-        kind: "ServiceAccount"
-        name: "vasanth-test"
-        namespace: "default"
+        kind: "User"
+        name: "vasanthkumar.kalali.ctr@sabre.com"
     restrictedRole:
       apiGroup: "rbac.authorization.k8s.io"
       kind: "ClusterRole"
       name: "cluster-admin"
 #      namespace: ""
-#      name: "cluster-admin"
