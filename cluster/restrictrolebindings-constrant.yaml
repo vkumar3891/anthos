@@ -12,7 +12,7 @@ spec:
     allowedSubjects:
       - apiGroup: "rbac.authorization.k8s.io"
         kind: "ServiceAccount"
-        name: "default"
+        name: "vasanth-test"
         namespace: "default"
     restrictedRole:
       apiGroup: "rbac.authorization.k8s.io"
