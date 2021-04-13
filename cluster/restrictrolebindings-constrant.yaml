@@ -5,9 +5,9 @@ metadata:
   name: restrictrolebindings
 spec:
   match:
-    kind:
+    kinds:
       - apiGroups: [""]
-        kind: "ClusterRoleBinding"
+        kinds: "ClusterRoleBinding"
   parameters:
     allowedSubjects:
       - apiGroup: "rbac.authorization.k8s.io"
@@ -16,6 +16,6 @@ spec:
     restrictedRole:
       apiGroup: "rbac.authorization.k8s.io"
       kind: "ClusterRole"
-      name: "*"
+      name: "cluster"
       namespace: ""
 #      name: "cluster-admin"
