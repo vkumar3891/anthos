@@ -4,41 +4,18 @@ kind: K8sRestrictRoleBindings
 metadata:
   name: restrictrolebindings
 spec:
-  enforcementAction: dryrun
+#  enforcementAction: dryrun
   match:
     kind:
       - apiGroups: [""]
-        kind: "ClusterRoleBinding"
+        kind: "RoleBinding"
   parameters:
     allowedSubjects:
       - apiGroup: "rbac.authorization.k8s.io"
-        kind: "User"
-        name: "vasanthkumar.kalali.ctr@sabre.com"
+        kind: "ServiceAccount"
+        name: "vasanth-test"
+        namespace: "default"
     restrictedRole:
       apiGroup: "rbac.authorization.k8s.io"
       kind: "ClusterRole"
       name: "cluster-admin"
-
-
-
-#---
-#apiVersion: constraints.gatekeeper.sh/v1beta1
-#kind: K8sRestrictRoleBindings
-#metadata:
-#  name: svc-account-restrictrolebindings
-#spec:
-##  enforcementAction: dryrun
-#  match:
-#    kind:
-#      - apiGroups: [""]
-#        kind: "ClusterRoleBinding"
-#  parameters:
-#    allowedSubjects:
-#      - apiGroup: "rbac.authorization.k8s.io"
-#        kind: "ServiceAccount"
-#        name: "vasanth-test"
-#        namespace: "default"
-#    restrictedRole:
-#      apiGroup: "rbac.authorization.k8s.io"
-#      kind: "ClusterRoleBinding"
-#      name: "cluster-admin"
