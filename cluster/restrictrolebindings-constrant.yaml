@@ -6,7 +6,7 @@ metadata:
 spec:
 #  enforcementAction: dryrun
   match:
-    kind:
+    kinds:
       - apiGroups: [""]
         kind: "RoleBinding"
   parameters:
@@ -18,4 +18,4 @@ spec:
     restrictedRole:
         apiGroup: "rbac.authorization.k8s.io"
         kind: "ClusterRole"
-#        name: ""
+        name: "cluster-admin"
