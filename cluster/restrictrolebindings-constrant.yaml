@@ -6,9 +6,9 @@ metadata:
 spec:
 #  enforcementAction: dryrun
   match:
-    kind:
+    kinds:
       - apiGroups: [""]
-        kind: RoleBinding
+        kinds: ["RoleBinding, ServiceAccount" ]
   parameters:
     allowedSubjects:
       - kind: ServiceAccount
