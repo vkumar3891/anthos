@@ -8,7 +8,7 @@ spec:
   match:
     kinds:
       - apiGroups: [""]
-        kinds: ["RoleBinding" ]
+        kind: RoleBinding
   parameters:
     allowedSubjects:
       - kind: ServiceAccount
