@@ -11,8 +11,7 @@ spec:
         kind: RoleBinding
   parameters:
     allowedSubjects:
-      - apiGroup: rbac.authorization.k8s.io
-        kind: ServiceAccount
+      - kind: ServiceAccount
         name: vasanth-test
         namespace: default
     restrictedRole:
