@@ -12,9 +12,9 @@ spec:
   parameters:
     allowedSubjects:
      - kind: ServiceAccount
-        name: vasanth-test
-        apiGroup: ""
-        namespace: default
+       name: vasanth-test
+       apiGroup: ""
+       namespace: default
 #     - kind: User	
 #       name: vasanthkumar.kalali.ctr@sabre.com
 #       namespace: default
