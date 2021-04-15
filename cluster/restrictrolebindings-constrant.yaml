@@ -9,6 +9,7 @@ spec:
     kind:
       - apiGroups: [""]
         kind: ["ServiceAccount"]
+          kind: Usder
   parameters:
     allowedSubjects:
      - kind: ServiceAccount
