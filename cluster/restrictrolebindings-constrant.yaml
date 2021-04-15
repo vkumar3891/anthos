@@ -7,9 +7,8 @@ spec:
 #  enforcementAction: dryrun
   match:
     kind:
-      - apiGroups: [""]
+      - apiGroup: [""]
         kind: ["ServiceAccount"]
-          kind: User
   parameters:
     allowedSubjects:
      - kind: ServiceAccount
