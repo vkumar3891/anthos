@@ -6,7 +6,7 @@ metadata:
 spec:
 #  enforcementAction: dryrun
   match:
-    kinds:
+    kind:
       - apiGroups: [""]
         kind: RoleBinding
   parameters:
