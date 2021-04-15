@@ -8,7 +8,7 @@ spec:
   match:
     kind:
       - apiGroup: [""]
-        kind: ["ServiceAccount"]
+        kind: ServiceAccount
   parameters:
     allowedSubjects:
      - kind: ServiceAccount
