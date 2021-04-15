@@ -14,7 +14,7 @@ spec:
       - kind: ServiceAccount
         name: vasanth-test
         apiGroup: ""
-#        namespace: default
+        namespace: default
     restrictedRole:
         apiGroup: rbac.authorization.k8s.io
         kind: Role
