@@ -6,16 +6,16 @@ metadata:
 spec:
 #  enforcementAction: dryrun
   match:
-    kinds:
+    kind:
       - apiGroups: [""]
-        kind: "RoleBinding"
+        kind: RoleBinding
   parameters:
     allowedSubjects:
-      - apiGroup: "rbac.authorization.k8s.io"
-        kind: "ServiceAccount"
-        name: "vasanth-test"
-        namespace: "default"
+      - apiGroup: rbac.authorization.k8s.io
+        kind: ServiceAccount
+        name: vasanth-test
+        namespace: default
     restrictedRole:
-        apiGroup: "rbac.authorization.k8s.io"
-        kind: "Role"
-        name: "pod-reader"
+        apiGroup: rbac.authorization.k8s.io
+        kind: Role
+        name: pod-reader
