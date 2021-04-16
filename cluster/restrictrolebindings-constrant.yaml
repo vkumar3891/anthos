@@ -20,6 +20,7 @@ spec:
 #       name: vasanthkumar.kalali.ctr@sabre.com
 #       namespace: default
 #       apiGroup: rbac.authorization.k8s.io
+
     restrictedRole:
 #        apiGroup: rbac.authorization.k8s.io
         apiGroup: ""
