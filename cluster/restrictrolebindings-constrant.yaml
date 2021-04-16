@@ -14,7 +14,7 @@ spec:
      - kind: ServiceAccount
        name: vasanth-test
        apiGroup: ""
-#       namespace: default
+       namespace: default
 #     - kind: User	
 #       name: vasanthkumar.kalali.ctr@sabre.com
 #       namespace: default
