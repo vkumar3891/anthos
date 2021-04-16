@@ -12,7 +12,7 @@ spec:
   parameters:
     allowedSubjects:
      - kind: ServiceAccount
-#       name: default
+       name: default
 #       apiGroup: ""
        namespace: default
 #     - kind: User      
