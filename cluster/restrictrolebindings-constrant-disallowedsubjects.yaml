@@ -11,10 +11,9 @@ spec:
         kind: RoleBinding
   parameters:
     disallowedSubjects:
-     - kind: ServiceAccount
-       name: vasanth-test
+     - kind: Group
+       name: system:serviceaccounts
        apiGroup: rbac.authorization.k8s.io
-       namespace: default
 
 #     - kind: User      
 #       name: vasanthkumar.kalali.ctr@sabre.com
