@@ -1,0 +1,27 @@
+---
+apiVersion: constraints.gatekeeper.sh/v1beta1
+kind: K8sDisallowedRoleBindingSubjects
+metadata:
+  name: disallowedrestrictrolebindingssubjects
+spec:
+#  enforcementAction: dryrun
+  match:
+    kind:
+      - apiGroup: [""]
+        kind: RoleBinding
+  parameters:
+    disallowedSubjects:
+#     - kind: ServiceAccount
+#       name: vasanth-test
+#       apiGroup: rbac.authorization.k8s.io
+#       namespace: default
+
+     - kind: User      
+       name: vasanthkumar.kalali.ctr@sabre.com
+       namespace: default
+       apiGroup: rbac.authorization.k8s.io
+
+#    restrictedRole:
+#        apiGroup: rbac.authorization.k8s.io
+#        kind: Role
+#        name: pod-reader
